@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        window.onload = function () {
+            // Define the two URLs
+            const siteA = "https://form.typeform.com/to/CRr22SDt";
+            const siteB = "https://form.typeform.com/to/Wr3ximuN";
+
+            // Randomly select one of the two: 50/50 chance
+            const destination = Math.random() < 0.5 ? siteA : siteB;
+
+            // Redirect the user
+            window.location.href = destination;
+        };
+    </script>
+</head>
+<body>
+    <p>Redirecting… If nothing happens, <a id="manualLink" href="#">click here</a>.</p>
+
+    <script>
+        // Update fallback link
+        document.getElementById("manualLink").href =
+            Math.random() < 0.5
+                ? "https://form.typeform.com/to/CRr22SDt"
+                : "https://form.typeform.com/to/Wr3ximuN";
+    </script>
+</body>
+</html>
